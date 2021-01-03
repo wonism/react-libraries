@@ -1,6 +1,23 @@
 {
   "name": "@w-labs/use-boolean-state",
   "version": "1.0.1",
+  "description": "React hook for managing boolean state",
+  "keyword": [
+    "react",
+    "reactjs",
+    "hooks",
+    "react-hooks"
+  ],
+  "license": "MIT",
+  "author": "wonism <yocee57@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonism/react-libraries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wonism/react-libraries/issues"
+  },
+  "homepage": "https://wonism.github.io/react-libraries",
   "main": "lib/cjs/index.js",
   "typings": "lib/cjs/index.d.ts",
   "module": "lib/esm/index.js",

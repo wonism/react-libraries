@@ -39,7 +39,7 @@ jobs:
           command: yarn build
       - run:
           name: Build Storybook
-          command: yarn build-storybook
+          command: yarn doc
       - store_artifacts:
           path: storybook-static
       - run:

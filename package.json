@@ -1,6 +1,13 @@
 {
   "name": "@w-labs/react-libs",
   "version": "0.0.0",
+  "keyword": [
+    "react",
+    "reactjs",
+    "react-component",
+    "hooks",
+    "react-hooks"
+  ],
   "description": "Monorepo for React Libraries",
   "workspaces": [
     "packages/*"
@@ -10,13 +17,21 @@
   "author": "wonism <yocee57@gmail.com>",
   "license": "MIT",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonism/react-libraries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wonism/react-libraries/issues"
+  },
+  "homepage": "https://wonism.github.io/react-libraries",
   "scripts": {
     "test": "jest",
     "tsc": "tsc",
     "lint": "eslint packages/**/src --ext ts,tsx",
     "lint:fix": "yarn lint --fix",
     "sb": "start-storybook -p 6006",
-    "doc": "build-storybook",
+    "doc": "rm -rf ./docs && build-storybook -o ./docs",
     "precanary": "yarn build",
     "canary": "lerna publish --canary",
     "prebuild": "rm -rf ./packages/**/lib",
