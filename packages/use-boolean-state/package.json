@@ -1,0 +1,19 @@
+{
+  "name": "@w-labs/use-boolean-state",
+  "version": "0.0.0",
+  "main": "lib/cjs/index.js",
+  "typings": "lib/cjs/index.d.ts",
+  "module": "lib/esm/index.js",
+  "devDependencies": {
+    "@storybook/react": "^6.1.11",
+    "@testing-library/react-hooks": "^3.7.0",
+    "@types/jest": "^26.0.19",
+    "@types/react": "^17.0.0",
+    "core-js": "^3.8.1",
+    "react": "^17.0.1"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.6"
+  },
+  "gitHead": "0a4dec38e19c7f45b77da43c44524d8325732c5a"
+}

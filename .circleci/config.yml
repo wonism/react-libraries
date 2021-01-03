@@ -1,0 +1,60 @@
+version: 2.1
+
+defaults: &defaults
+  working_directory: ~/repo
+  docker:
+    - image: circleci/node:15.5.0
+
+jobs:
+  deploy:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Use Yarn Berry
+          command: yarn set version berry
+      - run:
+          name: Authenticate with registry
+          command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" > ~/repo/.npmrc
+      - run:
+          name: Create GitHub Deployment
+          command: ./scripts/start.sh > deployment
+      - restore_cache:
+          name: Restore Yarn Package Cache
+          keys:
+            - yarn-packages-{{ checksum "yarn.lock" }}
+      - run:
+          name: Install Dependencies
+          command: yarn install --immutable
+      - save_cache:
+          name: Save Yarn Package Cache
+          key: yarn-packages-{{ checksum "yarn.lock" }}
+          paths:
+            - ~/.cache/yarn
+      - run:
+          name: Yarn
+          command: yarn
+      - run:
+          name: Lint
+          command: yarn lint
+      - run:
+          name: Build Components
+          command: yarn build
+      - run:
+          name: Build Storybook
+          command: yarn build-storybook
+      - store_artifacts:
+          path: storybook-static
+      - run:
+          name: Add GitHub Deployment success status
+          command: ./scripts/end.sh success
+          when: on_success
+      - run:
+          name: Add GitHub Deployment error status
+          command: ./scripts/end.sh error
+          when: on_fail
+
+workflows:
+  deploy:
+    jobs:
+      - deploy

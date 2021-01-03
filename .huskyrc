@@ -1,0 +1,6 @@
+{
+  "hooks": {
+    "post-merge": "./scripts/dev/postMerge.sh",
+    "pre-commit": "yarn run lint-staged"
+  }
+}
