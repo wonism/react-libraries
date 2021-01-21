@@ -1,13 +1,8 @@
 {
   "coc.preferences.formatOnType": false,
-  "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "coc.preferences.formatOnSaveFiletypes": [],
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "eslint.filetypes": [],
   "eslint.nodePath": ".yarn/sdks",
   "eslint.options": {
     "configFile": ".eslintrc.js"

@@ -1,0 +1,35 @@
+{
+  "name": "@w-labs/use-template",
+  "version": "0.1.0",
+  "description": "React hook template",
+  "keyword": [
+    "react",
+    "reactjs",
+    "hooks",
+    "react-hooks"
+  ],
+  "license": "MIT",
+  "author": "wonism <yocee57@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wonism/react-libraries.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wonism/react-libraries/issues"
+  },
+  "homepage": "https://wonism.github.io/react-libraries",
+  "main": "lib/cjs/index.js",
+  "typings": "lib/cjs/index.d.ts",
+  "module": "lib/esm/index.js",
+  "devDependencies": {
+    "@storybook/react": "^6.1.11",
+    "@testing-library/react-hooks": "^3.7.0",
+    "@types/jest": "^26.0.19",
+    "@types/react": "^17.0.0",
+    "core-js": "^3.8.1",
+    "react": "^17.0.1"
+  },
+  "peerDependencies": {
+    "react": ">= 16.8.6"
+  }
+}
